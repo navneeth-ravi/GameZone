@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+h1{
+  /* text-align: center; */
+  font-family: 'Pacifico', cursive;
+  font-size: 4vw;
+  font-style: Bold;
+}
+h3{
+  text-align: center;
+  /* font-family: sofia; */
+  font-size: 2vw;
+  font-style: Bold;
+}
+
+/* body {
+  background-color: #caf0f8;
+} */
+
+#wrapper {
+  width: 500px;
+  height: 50%;
+  overflow: hidden;
+  border: 0px solid #000;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.jumbotron{
+  background-color: #f8edeb;
+  border-radius: 40px;
+}
+
+.form-control{
+margin-bottom: 10px;
+}
+
+.ac {
+  text-align: center;
+  font-weight: normal;
+}
+.ac a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3897f0;
+  font-weight: normal;
+}

@@ -1,0 +1,41 @@
+{% extends "games/basic.html" %}
+{% block base %}
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>GameZone Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/basic.css" %}">
+  </head>
+<body>
+
+      <div id="wrapper">
+
+        <!-- <div class="jumbotron bg-transparent">
+          <h1>GameZone</h1>
+
+        </div> -->
+        <div class="jumbotron">
+          {% if registered %}
+          <h1>thank u</h1>
+          {% else %}
+          <h3>Sign up</h3>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="" value="Register" class="btn btn-primary">
+          </form>
+          {% endif %}
+          <!-- <input type="email" placeholder="Valid email" class="form-control">
+          <input type="text" placeholder="Username" class="form-control">
+          <input type="password" placeholder="Password (log_in purpose)" class="form-control">
+          <input type="button" value="Register" class="btn btn-primary btn-block"> -->
+        </div>
+
+      </div>
+    </body>
+      
+      {% endblock %}
+      <h1>end</h1>

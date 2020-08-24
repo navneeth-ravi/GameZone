@@ -1,0 +1,63 @@
+<p>
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+Link with href
+</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+Button with data-target
+</button>
+</p>
+<div class="container">
+
+<div class="collapse" id="collapseExample">
+<div class="card card-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+</div>
+</div>
+</div>
+
+
+
+
+
+
+log_in
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GameZone</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/basic.css" %}">
+  </head>
+  <body>
+      <div id="wrapper">
+        <div class="jumbotron bg-transparent">
+          <h1>Game Zone</h1>
+        </div>
+        <div class="jumbotron">
+          <h3>Log In</h3>
+          <form method="post" action="{% url 'games:user_login' %}">
+            {% csrf_token %}
+
+          <input type="text" placeholder="Username" name="username" class="form-control">
+          <input type="password" placeholder="Password" name="password" class="form-control">
+
+          <input type="submit" value="Log in" class="btn btn-primary btn-block"><br><br>
+        </form>
+
+          <div class="ac">
+            Don't have an account? <a href="#">Sign up</a>
+          </div>
+        </div>
+
+      </div>
+
+  </body>
+</html>

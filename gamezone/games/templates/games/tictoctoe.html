@@ -1,0 +1,60 @@
+{% extends "games/basic.html" %}
+{% block base %}
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/tic.css" %}">
+  </head>
+  <style media="screen">
+  .containe{
+position:absolute;
+top:20%;
+bottom:25%;
+align:center;
+color:#ff8500;
+padding-left:20%;
+padding-right:20%;
+}
+.jumbotron{
+  border-radius: 40px;
+}
+  </style>
+  <body>
+
+    <div class="containe">
+      <div id="wrapper">
+
+      <div class="jumbotron">
+        <h1 align='center'>TicTacToe</h1>
+      </div>
+    </div>
+
+        <table align='center'>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <br>
+        <p> <a id='b' class="btn btn-primary btn-lg" href="#" role="button">Restart</a> </p>
+        <script type="text/javascript" src="{% static "js/tic.js" %}"></script>
+
+
+    </div>
+  </body>
+  {% endblock %}
